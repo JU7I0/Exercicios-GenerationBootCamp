@@ -1,29 +1,32 @@
 package exercíciosHerançaPolimorfismo;
 
-public class Cavalo extends Animal {
+public class Cavalo extends Animal{
 
-	private String deveCorrer;
-
-	public Cavalo(String nome, int idade, String emitirSom, String deveCorrer) {
-		super(nome, idade, emitirSom);
-		this.deveCorrer = deveCorrer;
-	}
-
-	public String getDeveCorre() {
-		return deveCorrer;
-	}
-
-	public void setDeveCorre(String deveCorrer) {
-		this.deveCorrer = deveCorrer;
+	public Cavalo()
+	{
+		super("Tipo animal: Cavalo");
 	}
 	
-	
-	public void imprimirCavalo() {
-		System.out.println("\nAnimal: "+getNome()+"\nIdade: "+getIdade()+
-				"\nEmitir som: "+getEmitirSom()+"\nDeve correr: "+deveCorrer);
+	@Override
+	public void nome(String nomeAnimal)
+	{
+		System.out.println("\nNome do cavalo: "+nomeAnimal);
 	}
 	
+	@Override
+	public void idade(int idadeAnimal)
+	{
+		System.out.println("\nIdade: "+idadeAnimal);
+	}
 	
+	@Override
+	public void som(String somAnimal)
+	{
+		System.out.println("\nSom que seu cavalo emite: "+somAnimal);
+	}
 	
-	
+	public void Corre()
+	{
+		System.out.println("\nUma das características do cavalo é correr!!!");
+	}
 }

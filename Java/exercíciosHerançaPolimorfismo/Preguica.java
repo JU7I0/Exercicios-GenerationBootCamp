@@ -1,29 +1,32 @@
 package exercíciosHerançaPolimorfismo;
 
-public class Preguica extends Animal {
-	
-	private String subirArvores;
+public class Preguica extends Animal{
 
-	public Preguica(String nome, int idade, String emitirSom, String subirArvores) {
-		super(nome, idade, emitirSom);
-		this.subirArvores = subirArvores;
+	public Preguica()
+	{
+		super("Tipo animal: Preguiça");
 	}
-
-	public String getSubirArvores() {
-		return subirArvores;
+	
+	@Override
+	public void nome(String nomeAnimal)
+	{
+		System.out.println("\nNome da preguiça: "+nomeAnimal);
 	}
-
-	public void setSubirArvores(String subirArvores) {
-		this.subirArvores = subirArvores;
+	
+	@Override
+	public void idade(int idadeAnimal)
+	{
+		System.out.println("\nIdade: "+idadeAnimal);
 	}
-
-	public void imprimirPreguica() {
-		System.out.println("\nAnimal: "+getNome()+"\nIdade: "+getIdade()+
-				"\nEmitir som: "+getEmitirSom()+"\nDeve subir em árvores: "+subirArvores);
+	
+	@Override
+	public void som(String somAnimal)
+	{
+		System.out.println("\nPreguiça emite som? "+somAnimal);
 	}
-
 	
-	
-	
-	
+	public void subirArvore()
+	{
+		System.out.println("\nUma das características da preguiça é subir em árvores!!!");
+	}
 }
